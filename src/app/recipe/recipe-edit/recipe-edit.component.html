@@ -1,0 +1,52 @@
+<div class="row">
+  <div class="col-xs-12">
+    <form [formGroup]="recipeForm" (ngSubmit)="onSubmit()">
+      <p>Tambah Data :</p>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="kode_barang">Kode Barang</label>
+            <input type="text" id="kode_barang" formControlName="kode_barang" class="form-control" style="width:70%;">  
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="nama_barang">Nama Barang</label>
+            <input type="text" id="nama_barang" formControlname="nama_barang" class="form-control" style="width:70%;">  
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="gambar">Gambar</label>
+            <input type="file" id="gambar" formControlName="gambar" class="form-control"  style="width:70%;"
+            #gambar>  
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <img  [src]="imagePath.value" class="img-responsive">
+        </div>
+      </div>
+      <div class="row">
+          <div class="col-xs-12">
+            <div class="form-group">
+              <label for="jumlah_barang">Jumlah Barang</label>
+              <input type="text" id="jumlah_barang" formControlname="jumlah_barang" class="form-control" style="width:70%;">  
+            </div>
+          </div>
+        </div>        
+        <div class="row">
+            <div class="col-xs-12">
+              <button type="submit" [disabled]="!recipeForm.valid" class="btn btn-success">Save</button>
+              <button type="button" class="btn btn-danger" (click)="onCancel()">Cancel</button>
+            </div>
+      </div>
+      
+    </form>
+  </div>
+</div>

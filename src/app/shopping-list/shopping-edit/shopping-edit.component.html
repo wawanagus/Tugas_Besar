@@ -1,0 +1,30 @@
+<div class="row">
+  <div class="col-xs-12">
+      <div class="row">
+          <div class="col-xs-12">
+            <div class="form-group">
+              <input type="text" id="nama_barang" formControlname="nama_barang" placeholder="Nama Barang" class="form-control" style="width:30%;">
+              <button type="button" class="	glyphicon glyphicon-search" (click)="onCancel()" ></button>
+            </div>
+            
+          </div>
+          
+    <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+        <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>Kode Barang</th>
+                <th>Nama Barang</th>
+                <th>Nama Peminjam</th>
+                <th>Jumlah Barang</th>
+                <th>Tanggal Pinjam</th>
+                <th>Tanggal Selesai</th>
+                <th>Pilihan</th>
+              </tr>
+            </thead>
+            
+          </table>
+    </form>
+  </div>
+</div>
